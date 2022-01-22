@@ -1,0 +1,11 @@
+{% extends 'info.html' %} 
+ 
+{% block content %} 
+    <h1> {% block title %} РАБОЧИЕ {% endblock %} </h1>
+    {% for post in posts %} 
+        <h2>{{ post['title'] }}</h2> 
+        <p><b><i>{{ post['content'] }}</i></b></p> 
+        <p>{{ post['created'] }}</p> 
+ 
+    {% endfor %} 
+{% endblock %}
